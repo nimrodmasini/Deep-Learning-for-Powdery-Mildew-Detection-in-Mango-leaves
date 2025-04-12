@@ -1,0 +1,234 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f9fbfa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Container for centering and spacing */
+.container {
+    max-width: 640px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header section */
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Logo circle with icon */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #f0fff4;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color: #4CAF50;
+}
+
+/* Title */
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Subtitle under header */
+.subtitle {
+    margin-top: 8px;
+    color: #718096;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Card wrapping upload form */
+.upload-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+}
+
+/* Drag-and-drop upload area */
+.upload-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for upload area */
+.upload-area:hover {
+    border-color: #9ae6b4;
+    background-color: #f9fbfa;
+}
+
+/* Spacing under SVG icon in upload */
+.upload-area svg {
+    margin-bottom: 12px;
+}
+
+/* Instruction text */
+.upload-area p {
+    margin: 0 0 12px;
+    color: #4a5568;
+    font-size: 15px;
+}
+
+/* Separator text between drag-drop and browse */
+.or {
+    display: block;
+    margin: 8px 0;
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* Hides actual file input */
+.file-input {
+    display: none;
+}
+
+/* Browse button */
+.browse-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0fff4;
+    color: #4CAF50;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect on browse */
+.browse-btn:hover {
+    background-color: #e6ffed;
+}
+
+/* Analyze button */
+.analyze-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect on analyze button */
+.analyze-btn:hover {
+    background-color: #3d8b40;
+}
+
+/* Image preview section */
+.image-preview-container {
+    margin: 24px 0;
+    text-align: center;
+}
+
+/* Image preview box */
+.image-preview {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Result display container */
+.result-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 24px;
+}
+
+/* Heading inside result */
+#result h2 {
+    margin-top: 0;
+    color: #2d3748;
+    font-size: 20px;
+}
+
+/* Paragraph inside result */
+#result p {
+    margin: 16px 0;
+    color: #4a5568;
+}
+
+/* Textarea for AI questions */
+#inquiry {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Ask AI button */
+#askBtn {
+    background-color: #4299e1;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Hover effect on ask button */
+#askBtn:hover {
+    background-color: #3182ce;
+}
+
+/* AI response loader */
+.ai-response-loading {
+    padding: 16px;
+    background-color: #f7fafc;
+    border-radius: 6px;
+    margin-top: 16px;
+    color: #718096;
+}
+
+/* Rendered AI markdown response */
+.response-content {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #f7fafc;
+    border-radius: 6px;
+    color: #4a5568;
+}
+
+/* Responsive design small screens */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .upload-card {
+        padding: 20px;
+    }
+
+    .upload-area {
+        padding: 24px;
+    }
+}

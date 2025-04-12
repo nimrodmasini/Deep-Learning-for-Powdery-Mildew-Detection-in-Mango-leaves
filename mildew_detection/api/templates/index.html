@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powdery Mildew Detector</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header section with title and subtitle -->
+        <div class="header">
+            <div class="logo">
+                <!-- SVG logo icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                    <path d="M8.5 8.5v.01"></path>
+                    <path d="M16 15.5v.01"></path>
+                    <path d="M12 12v.01"></path>
+                    <path d="M11 17v.01"></path>
+                    <path d="M7 14v.01"></path>
+                </svg>
+            </div>
+            <h1>Plant Health Analysis</h1>
+            <p class="subtitle">Detect powdery mildew in Mango leaves</p>
+        </div>
+
+        <!-- Upload section -->
+        <div class="upload-card">
+            <div class="upload-area" id="dropZone">
+                <!-- Upload icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Drag & drop your plant image here</p>
+                <span class="or">or</span>
+
+                <!-- File input for image selection -->
+                <input type="file" id="imageInput" accept="image/*" class="file-input">
+                <label for="imageInput" class="browse-btn">Browse files</label>
+            </div>
+
+            <!-- Area to show upload status messages -->
+            <div id="uploadStatus" class="status-message"></div>
+
+            <!-- Button to trigger image analysis -->
+            <button onclick="classifyImage()" class="analyze-btn">Analyze Image</button>
+        </div>
+
+        <!-- Image preview section -->
+        <div class="image-preview-container">
+            <img id="previewImage" src="" alt="" style="display:none;" class="image-preview">
+        </div>
+        
+        <!-- Area to display classification results and AI responses -->
+        <div id="result" class="result-container"></div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

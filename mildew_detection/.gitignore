@@ -1,0 +1,24 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Django database
+db.sqlite3
+
+# VSCode settings
+.vscode/
+
+# Model files
+*.pth
+*.gguf
+
+# OS files
+.DS_Store
+Thumbs.db
